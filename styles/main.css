@@ -238,7 +238,6 @@ li.bespoke-bullet-inactive {
   background: none;
 }
 pre {
-  padding: 26px !important;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
@@ -283,7 +282,7 @@ a {
   color: #0089f3;
   text-decoration: none;
 }
-#movie{
+.movie{
   -moz-transform:rotate(180deg);
   -webkit-transform:rotate(180deg);
   -o-transform:rotate(180deg);
@@ -294,7 +293,7 @@ a {
   right: -100px;
   width: auto;
   height: 100%;
-  z-index: -1000;
+  z-index: 10;
   overflow: hidden;
 }
 #opening_slide{
@@ -321,12 +320,13 @@ a {
 }
 .information {
   position: absolute;
-  bottom: 100px;
+  bottom: 50px;
   font-size: 15pt;
   right: 0;
   padding-right: 40px;
   margin-left: 20px;
   line-height: 1.3em;
+  text-align: left;
 }
 #sharepoint_mobile_text{
   color: rgb(165, 48, 145);
@@ -334,7 +334,15 @@ a {
   bottom: 0px;
   left: 30px;
   display: inline;
-  text-height: 10px;
+  z-index: 15;
+}
+#ask_alice_text{
+  color: rgb(165, 48, 145);
+  position: absolute;
+  bottom: 0px;
+  left: 180px;
+  display: inline;
+  z-index: 15;
 }
 .bold{
   color: rgb(199,210,138);

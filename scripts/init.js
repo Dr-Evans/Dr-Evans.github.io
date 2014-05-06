@@ -35,7 +35,7 @@ $(function() {
 				$("#body").removeAttr('class');
 				$("#body").addClass(themes[selectedThemeIndex]);
 				
-				$("#current_theme").text(themes[selectedThemeIndex])
+				$("#current_theme").text(themes[selectedThemeIndex]);
 				$("#current_theme").removeAttr('class');
 				$("#current_theme").addClass(themes[selectedThemeIndex] + "_color")
 			}
@@ -45,9 +45,9 @@ $(function() {
 				$("#body").removeAttr('class');
 				$("#body").addClass(themes[selectedThemeIndex]);
 				
-				$("#current_theme").text(themes[selectedThemeIndex])
+				$("#current_theme").text(themes[selectedThemeIndex]);
 				$("#current_theme").removeAttr('class');
-				$("#current_theme").addClass(themes[selectedThemeIndex] + "_color")
+				$("#current_theme").addClass(themes[selectedThemeIndex] + "_color");
 			}
 		};
 		

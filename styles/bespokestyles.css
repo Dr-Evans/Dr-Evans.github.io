@@ -18,7 +18,7 @@
 	background: rgb(86, 174, 231);
 }
 .cube a {
-	color: rgb(86, 174, 231);
+	color: rgb(60, 102, 249);
 }
 .cube section.bespoke-before {
 	-webkit-transform: translateX(-332px) rotateY(-70deg) translateX(-652px) rotateY(-110deg) translateX(-530px);
@@ -187,7 +187,7 @@
 	background: rgb(243, 111, 86);
 }
 .classic a {
-	color: rgb(243, 111, 86);
+	color: rgb(84, 75, 250);
 }
 .classic section.bespoke-before {
 	-webkit-transform: translate3d(-1920px, 0, 0);
@@ -245,7 +245,7 @@
 	background: rgb(131, 199, 69);
 }
 .carousel a {
-	color: rgb(131, 199, 69);
+	color: rgb(236, 240, 66);
 }
 .carousel section.bespoke-before {
 	-webkit-transform: translateX(-980px) rotateY(-72deg) translateX(-1290px);
