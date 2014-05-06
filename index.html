@@ -43,13 +43,28 @@
         </div>
       </section>
       <section>
+        <h2>Initial Frameworks</h2>
+        <h3>I built the initial application using the jQuery and jQuery Mobile frameworks.<br></h3>
+        <div style="display: inline">
+          <div style="display: inline">
+            <img src="img/spmobile1.png" height="auto" width="120px" class="outerglow" id="spmobile1">
+            <img src="img/spmobile2.png" height="auto" width="120px" class="outerglow" id="spmobile2">
+          </div>
+          <div style="display: inline; margin-left: 30px">
+            <img src="img/spmobilenew1.png" height="auto" width="120px" class="outerglow" id="spmobilenew1">
+            <img src="img/spmobilenew2.png" height="auto" width="120px" class="outerglow" id="spmobilenew2">
+          </div>
+          <p><strong>We've gone a long way.</strong></p>
+        </div>
+      </section>
+      <section>
         <h2>NTLM Authentication</h2>
         <h3>I developed a cross-platform solution in JavaScript to authenticate with the SharePoint servers.</h3>
         <br>
         <pre data-language="javascript" style="text-align: left">
 function ntlmAuth(username, password, domain, url, type){
   Ntlm.setCredentials(domain, username, password);
-  var ntlmRequest = Ntlm.getRequestChallenge(url, type);
+  var ntlmRequest = Ntlm.createAuthenticationChallenge(url, type);
   
   ntlmRequest.setRequestHeader('Accept', 'application/json; odata="verbose"');
   ntlmRequest.send(null);
@@ -60,11 +75,24 @@ function ntlmAuth(username, password, domain, url, type){
 }</pre>
       </section>
       <section>
-        <h2>In the meantime, I proposed novel solutions to sidestep the authentication issue.</h2>
+        <h2>In the meantime, I proposed novel solutions to sidestep the authentication issues.</h2>
       </section>
       <section>
-        <h2 class="bullet">UF Connect</h2>
-        <li>Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a></li>
+        <h2>CRUD Operations</h2>
+        <h3>I discovered and implemented create, read, update, and delete operations on SharePoint lists, folders, and list items using <strong>REST API calls</strong> and <strong>SOAP queries</strong>.<br></h3>
+        <pre data-language="javascript" style="text-align: left">
+function getXRD(){
+  var url = localStorage.getItem("ssl") + localStorage.getItem("host") + "/_api/contextinfo";
+  
+  var json = ntlmAuth(username, password, domain, url, type);
+  var xrd = json.d.GetContextWebInfromation.FormDigestValue;
+  
+  return xrd
+}</pre>
+      </section>
+      <section data-bespoke-state="documentation">
+        <h2>Documentation</h2>
+        <h3>I wrote extensive documentation. You can view it all on the <a href="https://gitlab.mindtree.com">SharePoint Mobile GitLab Repo</a>.</h3>
       </section>
       <section>
         <h2>In fact, this entire presentation is written in HTML, JavaScript, and CSS!</h2>
@@ -76,22 +104,30 @@ function ntlmAuth(username, password, domain, url, type){
         </video>
         <h1 id="ask_alice_text">Ask Alice</h1>
       </section>
-      <section data-bespoke-hash="named-route">
-        <h2>Named Route</h2>
-        <h3>Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a></h3>
-        <p>Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.</p>
+      <section>
+        <h2>Contributions</h2>
+        <h3>All of the teams hard work (especially authentication) was applied to the Ask Alice team's needs.</h3>
       </section>
-      <section data-bespoke-state="emphatic">
-        <h2>Emphatic Slide!</h2>
-        <h3>Powered by <a href="https://github.com/markdalgleish/bespoke-state">bespoke-state</a></h3>
+      <section>
+        <h2 class="bullet">What I've learned</h2>
+        <ul>
+          <li>Good design demands good compromise.</li>
+          <li>jQuery and jQuery mobile are the bomb.</li>
+          <li>PhoneGap is a powerful tool, but will never achieve native results.</li>
+          <li>SharePoint 2013 is a fickle beast.</li>
+          <li>Everything you do will be on a team, learn to work together.</li>
+          <li>Outlook is your best friend.</li>
+          <li>Newfound respect for software developers. I have a lot to aspire to.</li>
+        </ul>
       </section>
       <section>
         <h2>Thank you for your time!</h2>
         <div class="information">
           <a>Email</a> - nickevans@ufl.edu<br>
           <a href="https://github.com/Dr-Evans">GitHub</a> - https://github.com/Dr-Evans<br>
-          <a href="https://www.linkedin.com/pub/nick-evans/72/249/81b">LinkedIn</a> - http://tiny.cc/connectwithnick
+          <a href="https://www.linkedin.com/pub/nick-evans/72/249/81b">LinkedIn</a> - https://tiny.cc/connectwithnick
         </div>
+        <div id="footer_last_slide">This slideshow is hosted at <a href="https://dr-evans.github.io">dr-evans.github.io</a></div>
       </section>
     </article>
     <!-- build:js scripts/scripts.js-->

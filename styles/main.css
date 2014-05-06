@@ -296,6 +296,10 @@ a {
   z-index: 10;
   overflow: hidden;
 }
+.documentation{
+  background-image: url('../img/documentation.png');
+}
+
 #opening_slide{
   background-image: url('../img/opening_background.png');
   background-size: 100%, 50%;
@@ -379,4 +383,7 @@ right: 0;
 font-size: 12pt;
 padding-right: 10px;
 z-index: 12;
+}
+#spmobile1, #spmobilenew1{
+  margin-right: 10px;
 }
