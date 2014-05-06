@@ -282,12 +282,14 @@ a {
   color: #0089f3;
   text-decoration: none;
 }
-.movie{
+.upside-down{
   -moz-transform:rotate(180deg);
   -webkit-transform:rotate(180deg);
   -o-transform:rotate(180deg);
   -ms-transform:rotate(180deg);
   transform:rotate(180deg);
+}
+.movie{
   position: absolute;
   bottom: 0px;
   right: -100px;
@@ -298,6 +300,9 @@ a {
 }
 .documentation{
   background-image: url('../img/documentation.png');
+}
+.thumbs-up{
+  background-image: url('../img/thumbs_up.gif');
 }
 
 #opening_slide{
