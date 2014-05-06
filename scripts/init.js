@@ -34,16 +34,25 @@ $(function() {
 				console.log("UP: " + selectedThemeIndex);
 				$("#body").removeAttr('class');
 				$("#body").addClass(themes[selectedThemeIndex]);
+				
+				$("#current_theme").text(themes[selectedThemeIndex])
+				$("#current_theme").removeAttr('class');
+				$("#current_theme").addClass(themes[selectedThemeIndex] + "_color")
 			}
 			else if (event.keyCode == '40') {
 				selectedThemeIndex = modulo(selectedThemeIndex - 1, 4);
 				console.log("DOWN: " + selectedThemeIndex);
 				$("#body").removeAttr('class');
 				$("#body").addClass(themes[selectedThemeIndex]);
+				
+				$("#current_theme").text(themes[selectedThemeIndex])
+				$("#current_theme").removeAttr('class');
+				$("#current_theme").addClass(themes[selectedThemeIndex] + "_color")
 			}
 		};
 		
 		$("#body").addClass(themes[selectedThemeIndex]);
+		
 	}
 	
 	function modulo(num, n) {
