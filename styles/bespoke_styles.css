@@ -33,7 +33,7 @@
 	-ms-transform: translateX(-332px) rotateY(-70deg) translateX(-512px);
 	-o-transform: translateX(-332px) rotateY(-70deg) translateX(-512px);
 	transform: translateX(-332px) rotateY(-70deg) translateX(-512px);
-	opacity: 0.5;
+	opacity: 0.2;
 }
 .cube section.bespoke-after {
 	-webkit-transform: translateX(332px) rotateY(70deg) translateX(652px) rotateY(110deg) translateX(530px);
@@ -48,7 +48,7 @@
 	-ms-transform: translateX(332px) rotateY(70deg) translateX(512px);
 	-o-transform: translateX(332px) rotateY(70deg) translateX(512px);
 	transform: translateX(332px) rotateY(70deg) translateX(512px);
-	opacity: 0.5;
+	opacity: 0.2;
 }
 
 /* Concave Theme */

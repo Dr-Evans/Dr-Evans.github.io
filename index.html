@@ -22,8 +22,8 @@
         <h2 id="opening_slide_text">Internship Summary Presentation</h2>
       </section>
       <section>
-        <h2>Hi, my name is <strong>Nick Evans</strong>.</h2>
-        <h3>I attend the University of Florida.</h3>
+        <h2>Hi, my name is <strong class="bold">Nick Evans</strong>.</h2>
+        <h3>I attend the University&nbsp;of&nbsp;Florida.</h3>
         <img src="img/profile.jpg" width="auto" height="230px" class="outerglow" id="profile"/>
       </section>
       <section>
@@ -36,6 +36,10 @@
       </section>
       <section data-bespoke-state="nobackground">
         <div>
+            <!-- You might be wondering why the video controls are upside down...
+                  well it turns out that my iPhone took the video upside down
+                  and I was unsure how to fix this, so I just flipped the video
+                  in the CSS! :P -->
             <video class="center upside-down movie" autoplay muted loop>
               <source src="assets/sharepoint_mobile_movie.mp4" type="video/mp4">
             </video>
@@ -43,19 +47,15 @@
         </div>
       </section>
       <section>
-        <h2>Initial Frameworks</h2>
-        <h3>I built the initial application using the jQuery and jQuery Mobile frameworks.<br></h3>
-        <div style="display: inline">
-          <div style="display: inline">
-            <img src="img/spmobile1.png" height="auto" width="120px" class="outerglow" id="spmobile1">
-            <img src="img/spmobile2.png" height="auto" width="120px" class="outerglow" id="spmobile2">
-          </div>
-          <div style="display: inline; margin-left: 30px">
-            <img src="img/spmobilenew1.png" height="auto" width="120px" class="outerglow" id="spmobilenew1">
-            <img src="img/spmobilenew2.png" height="auto" width="120px" class="outerglow" id="spmobilenew2">
-          </div>
-          <p><strong>We've gone a long way.</strong></p>
+        <h2>Initial Structure</h2>
+        <h3>I built the initial application using the jQuery and jQuery Mobile frameworks.</h3>
+        <br>
+        <div style="display: inline;">
+          <img src="img/spmobile1.png" height="auto" width="150px" class="outerglow" id="spmobile1">
+          <img src="img/spmobile2.png" height="auto" width="150px" class="outerglow" id="spmobile2">
         </div>
+        <br>
+        <p><strong>And we've gone a long way!</strong></p>
       </section>
       <section>
         <h2>NTLM Authentication</h2>
@@ -79,7 +79,8 @@ function ntlmAuth(username, password, domain, url, type){
       </section>
       <section>
         <h2>CRUD Operations</h2>
-        <h3>I discovered and implemented create, read, update, and delete operations on SharePoint lists, folders, and list items using <strong>REST API calls</strong> and <strong>SOAP queries</strong>.<br></h3>
+        <h3>I discovered and implemented create, read, update, and delete operations on SharePoint lists, folders, and list items using <strong>SOAP queries</strong> and <strong>REST API calls</strong>.<br></h3>
+        <br>
         <pre data-language="javascript" style="text-align: left">
 function getXRD(){
   var url = localStorage.getItem("ssl") + localStorage.getItem("host") + "/_api/contextinfo";
@@ -95,19 +96,28 @@ function getXRD(){
         <h3>I wrote extensive documentation. You can view it all on the <a href="https://gitlab.mindtree.com" target="_blank">SharePoint Mobile GitLab Repo</a>.</h3>
       </section>
       <section data-bespoke-state="nobackground">
+        <!-- You might be wondering why the video controls are upside down...
+                  well it turns out that my iPhone took the video upside down
+                  and I was unsure how to fix this, so I just flipped the video
+                  in the CSS! :P -->
         <video class="center upside-down movie" autoplay muted loop>
           <source src="assets/ask_alice_movie.mp4" type="video/mp4">
         </video>
         <h1 id="ask_alice_text">Ask Alice</h1>
       </section>
       <section>
-        <h2>Contributions</h2>
-        <h3>Many of the functionalities that I developed for SharePoint Mobile were utilized in the creation of Ask Alice. This helped jumpstart initial development of the site.</h3>
+        <h2>Shared Knowledge</h2>
+        <h3>Many of the functionalities that I developed for SharePoint Mobile were utilized in the creation of Ask Alice.</h3>
+        <br>
+        <h4>This helped jumpstart initial development of the site!</h4>
       </section>
       <section>
-        <h2>Initial PhoneGap Implementation</h2>
-        <h3>I helped create the initial cross-platform mobile application for Ask Alice using PhoneGap.</h3>
-        <p></p>
+        <h2 class="bullet">Continual Support</h2>
+        <ul>
+          <li>I helped construct an initial cross-platform mobile application for the most recent build of Ask Alice using PhoneGap.</li>
+          <li>I gave leads to solve the development of a one time authentication for the phone and web application.</li>
+          <li></li>
+        </ul>
       </section>
       <section data-bespoke-state="nobackground thumbs-up">
         <h2 style="color: rgb(220, 6, 81); background-color: white; -webkit-border-radius: 8px; border-radius: 8px;">Overall I'm very pleased with my work.<br>:&#41;</h2>
@@ -120,9 +130,9 @@ function getXRD(){
           <li>PhoneGap is a powerful tool, but will never achieve native results.</li>
           <li>SharePoint 2013 is a fickle beast.</li>
           <li>Everything you do will be on a team, learn to work together.</li>
-          <li>Outlook is your best friend (when it's not being slow).</li>
+          <li>Outlook is your best friend.</li>
           <li>Newfound respect for software developers. I have a lot to aspire to.</li>
-          <li>HTLM, CSS, and JavaScript design principles.</li>
+          <li>HTML, CSS, and JavaScript design principles.</li>
         </ul>
       </section>
       <section>
@@ -133,8 +143,8 @@ function getXRD(){
         <h2>Thank you for your time!</h2>
         <div class="information">
           <a href="mailto:nickevans@ufl.edu">Email</a> - nickevans@ufl.edu<br>
-          <a href="https://github.com/Dr-Evans" target="_blank">GitHub</a> - https://github.com/Dr-Evans<br>
-          <a href="https://www.linkedin.com/pub/nick-evans/72/249/81b" target="_blank">LinkedIn</a> - https://tiny.cc/connectwithnick
+          <a href="https://github.com/Dr-Evans" target="_blank">GitHub</a> - github.com/Dr-Evans<br>
+          <a href="https://www.linkedin.com/pub/nick-evans/72/249/81b" target="_blank">LinkedIn</a> - bit.ly/linkwithnick 
         </div>
         <div id="footer_last_slide">This slideshow is hosted at <a href="https://dr-evans.github.io" target="_blank">dr-evans.github.io</a></div>
       </section>
