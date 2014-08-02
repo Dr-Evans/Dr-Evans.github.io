@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Mindtree Final Presentation | Nick Evans</title>
+    <!-- build:css styles/styles.css-->
+    <link rel="shortcut icon" href="img/mindtree_logo.ico">
+    <link rel="stylesheet" type="text/css" href="bower_components/prism/themes/prism-tomorrow.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/bespokestyles.css">
+    <link rel="stylesheet" type="text/css" href="styles/rainbow_theme.css">
+    <script src="scripts/jquery.js" type="text/javascript"></script>
+    <script src="scripts/rainbow-custom.min.js" type="text/javascript"></script>
+    <!-- endbuild-->
+  </head>
+  <body id="body"> 
+    <h2 id="copyright">&copy; Mindtree limited 2014</h2>
+    <h2 id="theme_view">Current theme: <span id="current_theme" class="coverflow_color">coverflow</span></h2>
+    <article>
+      <section id="opening_slide">
+        <h2 id="opening_slide_text">Internship Summary Presentation</h2>
+      </section>
+      <section>
+        <h2>Hi, my name is <strong>Nick Evans</strong>.</h2>
+        <h3>I attend the University of Florida.</h3>
+        <img src="img/profile.jpg" width="auto" height="230px" class="outerglow" id="profile"/>
+      </section>
+      <section>
+        <h2 class="bullet">I have been interning at Mindtree since <span class="bold">January</span>.</h2>
+        <h3 style="padding-bottom: 8px"><strong>My main focus has been on:</strong></h3>
+        <ul>
+          <li><p><strong>SharePoint Mobile</strong>, a cross-platform mobile application that can interface with Mindtree's SharePoint Servers</p></li>
+          <li><p><strong>Ask Alice</strong>, an internal help site similar to Stack Overflow</p></li>
+        </ul>
+      </section>
+      <section data-bespoke-state="nobackground">
+        <div>
+            <video class="center movie" autoplay muted loop>
+              <source src="assets/sharepoint_mobile_movie.mp4" type="video/mp4">
+            </video>
+          <h1 id="sharepoint_mobile_text">SharePoint Mobile</h1>
+        </div>
+      </section>
+      <section>
+        <h2>Initial Frameworks</h2>
+        <h3>I built the initial application using the jQuery and jQuery Mobile frameworks.<br></h3>
+        <div style="display: inline">
+          <div style="display: inline">
+            <img src="img/spmobile1.png" height="auto" width="120px" class="outerglow" id="spmobile1">
+            <img src="img/spmobile2.png" height="auto" width="120px" class="outerglow" id="spmobile2">
+          </div>
+          <div style="display: inline; margin-left: 30px">
+            <img src="img/spmobilenew1.png" height="auto" width="120px" class="outerglow" id="spmobilenew1">
+            <img src="img/spmobilenew2.png" height="auto" width="120px" class="outerglow" id="spmobilenew2">
+          </div>
+          <p><strong>We've gone a long way.</strong></p>
+        </div>
+      </section>
+      <section>
+        <h2>NTLM Authentication</h2>
+        <h3>I developed a cross-platform solution in JavaScript to authenticate with the SharePoint servers.</h3>
+        <br>
+        <pre data-language="javascript" style="text-align: left">
+function ntlmAuth(username, password, domain, url, type){
+  Ntlm.setCredentials(domain, username, password);
+  var ntlmRequest = Ntlm.createAuthenticationChallenge(url, type);
+  
+  ntlmRequest.setRequestHeader('Accept', 'application/json; odata="verbose"');
+  ntlmRequest.send(null);
+  
+  var json = $.parseJSON(ntlmRequest.responseText);
+  
+  return json;
+}</pre>
+      </section>
+      <section>
+        <h2>In the meantime, I proposed novel solutions to sidestep the authentication issues.</h2>
+      </section>
+      <section>
+        <h2>CRUD Operations</h2>
+        <h3>I discovered and implemented create, read, update, and delete operations on SharePoint lists, folders, and list items using <strong>REST API calls</strong> and <strong>SOAP queries</strong>.<br></h3>
+        <pre data-language="javascript" style="text-align: left">
+function getXRD(){
+  var url = localStorage.getItem("ssl") + localStorage.getItem("host") + "/_api/contextinfo";
+  
+  var json = ntlmAuth(username, password, domain, url, type);
+  var xrd = json.d.GetContextWebInfromation.FormDigestValue;
+  
+  return xrd
+}</pre>
+      </section>
+      <section data-bespoke-state="documentation">
+        <h2>Documentation</h2>
+        <h3>I wrote extensive documentation. You can view it all on the <a href="https://gitlab.mindtree.com" target="_blank">SharePoint Mobile GitLab Repo</a>.</h3>
+      </section>
+      <section>
+        <h2>In fact, this entire presentation is written in HTML, JavaScript, and CSS!</h2>
+        <h3>Thanks to <a href="http://markdalgleish.com/projects/bespoke.js/" target="_blank">bespoke.js</a></h3>
+      </section>
+      <section data-bespoke-state="nobackground">
+        <video class="center movie" autoplay muted loop>
+          <source src="assets/ask_alice_movie.mp4" type="video/mp4">
+        </video>
+        <h1 id="ask_alice_text">Ask Alice</h1>
+      </section>
+      <section>
+        <h2>Contributions</h2>
+        <h3>All of the teams hard work (especially authentication) was applied to the Ask Alice team's needs.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">What I've learned</h2>
+        <ul>
+          <li>Good design demands good compromise.</li>
+          <li>jQuery and jQuery mobile are the bomb.</li>
+          <li>PhoneGap is a powerful tool, but will never achieve native results.</li>
+          <li>SharePoint 2013 is a fickle beast.</li>
+          <li>Everything you do will be on a team, learn to work together.</li>
+          <li>Outlook is your best friend.</li>
+          <li>Newfound respect for software developers. I have a lot to aspire to.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Thank you for your time!</h2>
+        <div class="information">
+          <a>Email</a> - nickevans@ufl.edu<br>
+          <a href="https://github.com/Dr-Evans" target="_blank">GitHub</a> - https://github.com/Dr-Evans<br>
+          <a href="https://www.linkedin.com/pub/nick-evans/72/249/81b" target="_blank">LinkedIn</a> - https://tiny.cc/connectwithnick
+        </div>
+        <div id="footer_last_slide">This slideshow is hosted at <a href="https://dr-evans.github.io" target="_blank">dr-evans.github.io</a></div>
+      </section>
+    </article>
+    <!-- build:js scripts/scripts.js-->
+    <script src="bower_components/bespoke.js/dist/bespoke.min.js"></script>
+    <script src="bower_components/bespoke-keys/dist/bespoke-keys.min.js"></script>
+    <script src="bower_components/bespoke-touch/dist/bespoke-touch.min.js"></script>
+    <script src="bower_components/bespoke-bullets/dist/bespoke-bullets.min.js"></script>
+    <script src="bower_components/bespoke-scale/dist/bespoke-scale.min.js"></script>
+    <script src="bower_components/bespoke-hash/dist/bespoke-hash.min.js"></script>
+    <script src="bower_components/bespoke-progress/dist/bespoke-progress.min.js"></script>
+    <script src="bower_components/bespoke-state/dist/bespoke-state.min.js"></script>
+    <script src="bower_components/bespoke-forms/dist/bespoke-forms.min.js"></script>
+    <script src="bower_components/prism/prism.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/init.js"></script>
+    <!-- endbuild-->
+  </body>
+</html>
